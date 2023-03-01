@@ -1,0 +1,14 @@
+//Modify this file to change what commands output to your statusbar, and recompile using the make command.
+static const Block blocks[] = {
+	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+	{"", "ph_kernel",   10000, 4},
+	{"    ", "ph_memory",	30,	0},
+
+	{"    ", "ph_time",	1,	1},
+	{"    ", "ph_disk" , 300 , 2},
+	{"    ", "ph_battery", 120,  3}
+};
+
+//sets delimeter between status commands. NULL character ('\0') means no delimeter.
+static char delim[] = "  ";
+static unsigned int delimLen = 3;
